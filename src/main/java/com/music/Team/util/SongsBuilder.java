@@ -77,9 +77,9 @@ public class SongsBuilder {
 			Info.setAlbum(album.substring(START,album.length()-3));
 			Info.setUrl(filepath);
 		musicInfo.add(Info);
+		System.out.println(Info.toString());
 		} catch (Exception e) {
 			System.out.println("没有获取到任何信息");
 		}
-		System.out.println("All Info："+mp3File.displayStructureAsPlainText());
 	}
 }

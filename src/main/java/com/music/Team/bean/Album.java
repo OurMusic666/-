@@ -2,7 +2,7 @@ package com.music.Team.bean;
 
 import org.springframework.stereotype.Component;
 
-@Component("alnum")
+@Component("album")
 public class Album {
 	//专辑id
 	private Integer album_id;

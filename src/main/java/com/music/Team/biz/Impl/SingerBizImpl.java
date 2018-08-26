@@ -12,6 +12,8 @@ public class SingerBizImpl implements SingerBiz {
 	@Autowired
 	private SingerDao singerDao;
 	
+	
+	
 	public void insert(Singer t) {
 		singerDao.insert(t);
 	}
@@ -27,8 +29,7 @@ public class SingerBizImpl implements SingerBiz {
 	}
 
 	public Singer select() {
-		// TODO Auto-generated method stub
-		return null;
+		return singerDao.select();
 	}
 
 	public SingerDao getSingerDao() {

@@ -27,8 +27,7 @@ public class AlbumBizImpl implements AlbumBiz{
 	}
 
 	public Album select() {
-		// TODO Auto-generated method stub
-		return null;
+		return albumDao.select();
 	}
 
 	public AlbumDao getAlbumDao() {
