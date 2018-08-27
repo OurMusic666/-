@@ -1,5 +1,7 @@
 package com.music.Team.biz;
 
+import java.util.List;
+
 import com.music.Team.bean.Singer;
 
 public interface SingerBiz {
@@ -10,7 +12,7 @@ public interface SingerBiz {
 
 	void update(Singer t);
 
-	Singer select();
+	List<Singer> select();
 	
 	
 }

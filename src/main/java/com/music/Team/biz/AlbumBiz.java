@@ -1,5 +1,7 @@
 package com.music.Team.biz;
 
+import java.util.List;
+
 import com.music.Team.bean.Album;
 
 public interface AlbumBiz {
@@ -10,6 +12,6 @@ public interface AlbumBiz {
 
 	void update(Album t);
 
-	Album select();
+	List<Album> select();
 	
 }

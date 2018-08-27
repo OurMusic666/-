@@ -1,5 +1,7 @@
 package com.music.Team.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
 
@@ -15,6 +17,8 @@ public interface MusicDao extends BaseDao<Music>{
 
 	void update(Music t);
 
-	Music select();
+	List<Music> select();
+	
+	
 	
 }

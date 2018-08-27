@@ -1,5 +1,7 @@
 package com.music.Team.biz.Impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +29,7 @@ public class ReplyBizImpl implements ReplyBiz {
 		
 	}
 
-	public Reply select() {
+	public List<Reply> select() {
 		// TODO Auto-generated method stub
 		return null;
 	}

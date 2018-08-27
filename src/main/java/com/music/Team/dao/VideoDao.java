@@ -1,5 +1,7 @@
 package com.music.Team.dao;
 
+import java.util.List;
+
 import com.music.Team.bean.Video;
 
 public interface VideoDao extends BaseDao<Video>{
@@ -10,6 +12,6 @@ public interface VideoDao extends BaseDao<Video>{
 
 	void update(Video t);
 
-	Video select();
+	List<Video> select();
 	
 }

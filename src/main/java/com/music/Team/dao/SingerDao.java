@@ -1,5 +1,7 @@
 package com.music.Team.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
@@ -17,7 +19,7 @@ public interface SingerDao extends BaseDao<Singer>{
 	void update(Singer t);
 	
 	@Select("select * from music")
-	Singer select();
+	List<Singer> select();
 	
 	
 }

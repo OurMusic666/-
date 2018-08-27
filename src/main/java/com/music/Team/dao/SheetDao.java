@@ -1,5 +1,7 @@
 package com.music.Team.dao;
 
+import java.util.List;
+
 import com.music.Team.bean.Sheet;
 
 public interface SheetDao extends BaseDao<Sheet> {
@@ -10,6 +12,6 @@ public interface SheetDao extends BaseDao<Sheet> {
 
 	void update(Sheet t);
 
-	Sheet select();
+	List<Sheet> select();
 	
 }

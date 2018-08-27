@@ -1,5 +1,7 @@
 package com.music.Team.dao;
 
+import java.util.List;
+
 import com.music.Team.bean.Reply;
 
 public interface ReplyDao extends BaseDao<Reply>{
@@ -10,6 +12,6 @@ public interface ReplyDao extends BaseDao<Reply>{
 
 	void update(Reply t);
 
-	Reply select();
+	List<Reply> select();
 	
 }

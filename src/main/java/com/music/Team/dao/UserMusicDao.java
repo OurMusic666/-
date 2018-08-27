@@ -1,5 +1,7 @@
 package com.music.Team.dao;
 
+import java.util.List;
+
 import com.music.Team.bean.UserMusic;
 
 public interface UserMusicDao extends BaseDao<UserMusic> {
@@ -10,6 +12,6 @@ public interface UserMusicDao extends BaseDao<UserMusic> {
 
 	void update(UserMusic t);
 
-	UserMusic select();
+	List<UserMusic> select();
 	
 }

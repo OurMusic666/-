@@ -1,8 +1,6 @@
 package com.music.Team.bean;
 
-import org.springframework.stereotype.Component;
 
-@Component("music")
 public class Music {
 	//歌曲id
 	private Integer music_id;
@@ -12,11 +10,19 @@ public class Music {
 	private Integer singer_id;
 	//专辑id
 	private Integer album_id;
+	//歌曲路径
+	private String music_url;
 	//歌词
 	private String music_lyr;
 	//会员（0/1）
 	private Integer music_isMember;
 	
+	public String getMusic_url() {
+		return music_url;
+	}
+	public void setMusic_url(String music_url) {
+		this.music_url = music_url;
+	}
 	public Integer getMusic_isMember() {
 		return music_isMember;
 	}

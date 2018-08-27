@@ -20,6 +20,8 @@ public class SongsBuilder {
 	 * 提供一个方法  只需要用户输入绝对地址   即可查出地址下的所有文件  
 	 * TODO   还没有确保只查出 mp3文件
 	 */
+	File file=new File("e:\\Three\\songs\\龙飘飘 - 昨夜星辰.mp3");
+	
 	public static ArrayList<MusicInfo> getMusic(String folderPath){
 		scanFilesWithRecursion(folderPath);
 		System.out.println(scanFiles);
@@ -57,6 +59,7 @@ public class SongsBuilder {
 			}
 		}
 		System.out.println("=============查询完成!=================");
+		System.out.println(scanFiles);
 		System.out.println("\t\t共查到数据:"+scanFiles.size()+"条");
 	}
 	

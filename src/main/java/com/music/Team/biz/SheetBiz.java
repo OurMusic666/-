@@ -1,5 +1,7 @@
 package com.music.Team.biz;
 
+import java.util.List;
+
 import com.music.Team.bean.Sheet;
 
 public interface SheetBiz {
@@ -10,6 +12,6 @@ public interface SheetBiz {
 
 	void update(Sheet t);
 
-	Sheet select();
+	List<Sheet> select();
 	
 }

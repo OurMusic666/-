@@ -1,5 +1,7 @@
 package com.music.Team.dao;
 
+import java.util.List;
+
 public interface BaseDao<T> {
 	//增
 	void insert(T t);
@@ -8,5 +10,5 @@ public interface BaseDao<T> {
 	//改
 	void update(T t);
 	//查
-	T select();
+	List<T> select();
 }

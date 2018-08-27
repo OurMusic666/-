@@ -1,5 +1,7 @@
 package com.music.Team.biz;
 
+import java.util.List;
+
 import com.music.Team.bean.Reply;
 
 public interface ReplyBiz {
@@ -10,6 +12,6 @@ public interface ReplyBiz {
 
 	void update(Reply t);
 
-	Reply select();
+	List<Reply> select();
 	
 }

@@ -1,5 +1,7 @@
 package com.music.Team.biz;
 
+import java.util.List;
+
 import com.music.Team.bean.Video;
 
 public interface VideoBiz {
@@ -10,6 +12,6 @@ public interface VideoBiz {
 
 	void update(Video t);
 
-	Video select();
+	List<Video> select();
 	
 }
