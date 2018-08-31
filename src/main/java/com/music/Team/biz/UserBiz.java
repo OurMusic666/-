@@ -20,4 +20,6 @@ public interface UserBiz {
 	
 	String createUser(User t);
 	
+	String selectEmail(User t);
+	
 }

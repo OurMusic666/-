@@ -65,7 +65,7 @@ public class SignupAction {
 	}
 	//对应ajax selectName 请求
 	@RequestMapping("/selectName")
-	public void selectName(Model model,User user,HttpServletRequest request,String name,HttpServletResponse response) throws IOException {
+	public void selectName(User user,String name,HttpServletResponse response) throws IOException {
 		System.out.println("name="+name);
 		if(name==null||name.equals("")){
 			 response.getWriter().write("3");
@@ -81,16 +81,56 @@ public class SignupAction {
 			
 			 response.getWriter().write("2");
 			  System.out.println("用户名未注册");
-			  request.setAttribute("msg", "用户名未注册");			
 		}else{
 			response.getWriter().write("1");
 			System.out.println("用户名已被注册");
-			model.addAttribute("msg", "用户名已被注册");
 
 		}
 		
 		
 		
+	}
+	
+	@RequestMapping("/selectEmail")
+	public void selectEmail(User user,String email,HttpServletResponse response) throws IOException {
+		System.out.println("email="+email);
+		if(email==null||email.equals("")){
+			 response.getWriter().write("3");
+			
+			return;
+		}
+		
+		user.setUser_email(email);
+		
+		String msgemail= sbiz.selectEmail(user);
+		
+		if(msgemail.equals("")||msgemail==null){
+			
+			 response.getWriter().write("2");
+			  System.out.println("邮箱未被绑定");
+		}else{
+			response.getWriter().write("1");
+			System.out.println("邮箱以被绑定");
+
+		}
+		
+		
+		
+	}
+	
+	
+	//判断pwd是否为空
+	@RequestMapping("/nullPwd")
+	public void nullPwd(String pwd,HttpServletResponse response) throws IOException{
+		
+		System.out.println("pwd="+pwd);
+		if(pwd==null||pwd.equals("")){
+			 response.getWriter().write("0");
+			
+			return;
+		}else{
+			response.getWriter().write("1");
+		}
 	}
 	
 }

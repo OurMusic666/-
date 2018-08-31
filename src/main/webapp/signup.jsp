@@ -28,10 +28,10 @@
       <a class="navbar-brand block" href="index.html"><span class="h1 font-bold">Musik</span></a>
       <section class="m-b-lg">
         <header class="wrapper text-center">
-          <strong>Sign up to find interesting thing</strong>
+          <strong> Sign up to find interesting thing</strong>
         </header>
         
-        <b  style=" color: red; margin-left: 1px ; padding-left:90px" >${msg}</b>
+        <b id="msg" style=" color: white; margin-left: 1px ; padding-left:25px" >${msg}</b>
         
          
            
@@ -46,29 +46,29 @@
           <div class="form-group" >
              
             <input id="pwd" onclick="pwdmsg()" name="user_pwd" type="password" placeholder="密码" class="form-control rounded input-lg text-center no-border">
-          <b  id="msgpwd"  style=" color: red; margin-left: 1px ; padding-left:30px" >${msgpwd}</b>
+          <b  id="msgpwd"  style=" color: white; margin-left: 1px ; padding-left:30px" >${msgpwd}</b>
           </div>
            <div class="form-group">
             <input onclick="emailmsg()" name="user_email" id="email" type="email" placeholder="邮箱" class="form-control rounded input-lg text-center no-border">
-          <b  id="msgemail"  style=" color: red; margin-left: 1px ; padding-left:30px" >${msgemail}</b>
+          <b  id="msgemail"  style=" color: white; margin-left: 1px ; padding-left:30px" >${msgemail}</b>
           </div>
             
              <header class="wrapper text-center">
          <a href="#" onclick="sendCode()" > <strong >点击获取验证码</strong> </a>
         </header>
           <div class="form-group">
-             <input  name="code" type="text" placeholder="验证码" class="form-control rounded input-lg text-center no-border">
+             <input  name="code" type="text" placeholder="验证码" class="form-control rounded input-lg text-center no-border" style=" margin-bottom: 40px">
           </div>
-            <b style="color: red; margin-left: 115px" ></b>   
-          <div class="checkbox i-checks m-b">
-            <label class="m-l">
-              <input type="checkbox" checked=""><i></i> Agree the <a href="#">terms and policy</a>
-            </label>
-          </div>
+    
+         
+          <header class="wrapper text-center">
+           <a href="signin.jsp" >如果您已创建了用户请点击这</a>
+           </header>
+           
           <button  type="submit" class="btn btn-lg btn-warning lt b-white b-2x btn-block btn-rounded"><i class="icon-arrow-right pull-right"></i><span class="m-r-n-lg">注册</span></button>
           <div class="line line-dashed"></div>
+                 
           <p class="text-muted text-center"><small>Already have an account?</small></p>
-          <a href="signin.html" class="btn btn-lg btn-info btn-block btn-rounded">登录</a>
         </form>
       
         

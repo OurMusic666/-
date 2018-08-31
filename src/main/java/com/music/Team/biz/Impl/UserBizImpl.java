@@ -81,4 +81,21 @@ public class UserBizImpl implements UserBiz {
 		}
 		
 	}
+
+	@Override
+	public String selectEmail(User t) {
+		t= userDao.selectEmail(t.getUser_email());
+		try{
+		if(t.getUser_id()!=null){
+			return t.getUser_email();
+			
+		}else{
+			return "";
+		}
+		
+		}catch(NullPointerException e){
+			e.printStackTrace();
+			return "";
+		}
+	}
 }

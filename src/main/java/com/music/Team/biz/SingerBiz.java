@@ -14,5 +14,5 @@ public interface SingerBiz {
 
 	List<Singer> select();
 	
-	
+	int insertSinger(Singer t);
 }

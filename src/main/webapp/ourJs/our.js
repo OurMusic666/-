@@ -26,12 +26,13 @@ function sendCode(){
 
   }
   
-  function showmsg(data) {
+  function showmsg() {
 		  if($("#name").val()=="" || $("#name").val()==null){
 		  $("#msgname").text("请输入用户名");
-		  
+		  $("#msg").text("");
+		 
 		  $("#name").mouseout(function(){
-			  $("#msgname").text("");
+			 
 			  var name={name: $("#name").val()};
 			  
 			  if($("#name").val()!="" || $("#name").val()!=null){
@@ -47,71 +48,72 @@ function sendCode(){
 					
 				  });
 				  
-				
-	
-		
-	
-				  
 			  }
 			
 		  });
 		  
-	  }else{
-		  /* $("#msgname").text(""); */
-
-	  }/* else{
-		  $("#name").mouseout(function(){
-			  $("#msgname").text("");
-			  var name={name: $("#name").val()};
-			  if($("#name").val()!="" || $("#name").val()!=null){
-				  $.post("selectName",name,function(name){
-					  
-				  });
-				  
-			  }
-			
-		  });
-	  } */
+		  }
 			
 } 
   	function pwdmsg(){
   	  if($("#pwd").val()=="" || $("#pwd").val()==null){
   		  $("#msgpwd").text("请输入密码");
-  	  }else{
-		  $("#msgpwd").text("");
-		  
-		/*   $("#msgpwd").mouseout(function(){
+  		  
+  		 $("#pwd").mouseout(function(){
+			 
+			  var pwd={pwd: $("#pwd").val()};
+			  
 			  if($("#pwd").val()!="" || $("#pwd").val()!=null){
-		  		  $("#msgname").text("");
+				  $.post("nullPwd",pwd,function(flag){
+					  if(flag==0){
+						  $("#msgpwd").text("密码不能为空");
+					  }else if(flag==1){
+						  $("#msgpwd").text("");
+					  }
+					
+					
+				  });
+				  
 			  }
-			  
-			  
+			
 		  });
-		   */
-		  }
+		  
 	  
+  	}
   	}
   	
   	function emailmsg(){
     	  if($("#email").val()=="" || $("#email").val()==null){
     		  $("#msgemail").text("请输入邮箱");
-    	  }else{
-  		  $("#msgemail").text("");
-  		  
-  		/*   $("#msgpwd").mouseout(function(){
-  			  if($("#pwd").val()!="" || $("#pwd").val()!=null){
-  		  		  $("#msgname").text("");
-  			  }
-  			  
-  			  
-  		  });
-  		   */
-  		  }
+    	  }$("#msg").text("");
+		 
+		  $("#email").mouseout(function(){
+			 
+			  var email={email: $("#email").val()};
+			  
+			  if($("#email").val()!="" || $("#email").val()!=null){
+				  $.post("selectEmail",email,function(flag){
+					  if(flag==1){
+						  $("#msgemail").text("该邮箱已被绑定");
+					  }else if(flag==3){
+						  $("#msgemail").text("邮箱不能为空 ");
+					  }else{
+						  $("#msgemail").text("");
+					  }
+					
+					
+				  });
+				  
+			  }
+			
+		  });
+		  
+  	}
   	  
     	   
     		
     		
-    	}
+    	
 /*   $(document).ready(function(){
 	  
 	  

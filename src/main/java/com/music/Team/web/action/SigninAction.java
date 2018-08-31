@@ -25,14 +25,16 @@ public class SigninAction {
 			//执行查询方法
 			String userName=sbiz.selectUser(user);
 			
+			System.out.println(userName);
+			
 			if(userName.equals("")){
 				//未查询到用户
 				request.setAttribute("msg","用户名或者密码错误！");
 				return "signin";
 			}else{
 				//查询到用户 跳转到主页
-				request.getSession().setAttribute("user", user);
-				return "index";
+				request.getSession().setAttribute("name",userName);
+				return "redirect:index.jsp";
 			}
 		
 	
